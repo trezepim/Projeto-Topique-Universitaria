@@ -9,7 +9,7 @@ package topique.view;
  * @author rafas
  */
 public class FormLogin extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormLogin.class.getName());
 
     /**
@@ -29,12 +29,12 @@ public class FormLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         panel1 = new java.awt.Panel();
-        boxUserLogin = new java.awt.TextField();
-        textUserLogin = new javax.swing.JLabel();
-        textPasswordLogin = new javax.swing.JLabel();
+        loginBoxUser = new java.awt.TextField();
+        loginTextUser = new javax.swing.JLabel();
+        loginTextPassword = new javax.swing.JLabel();
         loginEntrarButton = new javax.swing.JButton();
         loginCadastrarButton = new javax.swing.JButton();
-        boxPasswordLogin = new javax.swing.JPasswordField();
+        loginBoxPassword = new javax.swing.JPasswordField();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -51,19 +51,19 @@ public class FormLogin extends javax.swing.JFrame {
         setBackground(java.awt.Color.white);
         setForeground(java.awt.Color.white);
 
-        boxUserLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        boxUserLogin.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
-        boxUserLogin.addActionListener(this::boxUserLoginActionPerformed);
+        loginBoxUser.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        loginBoxUser.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        loginBoxUser.addActionListener(this::loginBoxUserActionPerformed);
 
-        textUserLogin.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        textUserLogin.setText("Usuário");
-        textUserLogin.setName(""); // NOI18N
-        textUserLogin.setOpaque(true);
+        loginTextUser.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        loginTextUser.setText("Usuário");
+        loginTextUser.setName(""); // NOI18N
+        loginTextUser.setOpaque(true);
 
-        textPasswordLogin.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        textPasswordLogin.setText("Senha");
-        textPasswordLogin.setName(""); // NOI18N
-        textPasswordLogin.setOpaque(true);
+        loginTextPassword.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        loginTextPassword.setText("Senha");
+        loginTextPassword.setName(""); // NOI18N
+        loginTextPassword.setOpaque(true);
 
         loginEntrarButton.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         loginEntrarButton.setText("Entrar");
@@ -72,7 +72,7 @@ public class FormLogin extends javax.swing.JFrame {
         loginCadastrarButton.setText("Cadastrar");
         loginCadastrarButton.addActionListener(this::loginCadastrarButtonActionPerformed);
 
-        boxPasswordLogin.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        loginBoxPassword.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,25 +81,25 @@ public class FormLogin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(90, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(textUserLogin)
-                    .addComponent(textPasswordLogin)
-                    .addComponent(boxUserLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(loginTextUser)
+                    .addComponent(loginTextPassword)
+                    .addComponent(loginBoxUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(loginEntrarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(loginCadastrarButton, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
-                    .addComponent(boxPasswordLogin))
+                    .addComponent(loginBoxPassword))
                 .addGap(90, 90, 90))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(218, 218, 218)
-                .addComponent(textUserLogin)
+                .addComponent(loginTextUser)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(boxUserLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(loginBoxUser, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(textPasswordLogin)
+                .addComponent(loginTextPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(boxPasswordLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(loginBoxPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(loginEntrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
@@ -110,12 +110,15 @@ public class FormLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boxUserLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxUserLoginActionPerformed
+    private void loginBoxUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBoxUserActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_boxUserLoginActionPerformed
+    }//GEN-LAST:event_loginBoxUserActionPerformed
 
     private void loginCadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginCadastrarButtonActionPerformed
         // TODO add your handling code here:
+        FormCadastro cadastro = new FormCadastro();
+        cadastro.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_loginCadastrarButtonActionPerformed
 
     /**
@@ -144,12 +147,12 @@ public class FormLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField boxPasswordLogin;
-    private java.awt.TextField boxUserLogin;
+    private javax.swing.JPasswordField loginBoxPassword;
+    private java.awt.TextField loginBoxUser;
     private javax.swing.JButton loginCadastrarButton;
     private javax.swing.JButton loginEntrarButton;
+    private javax.swing.JLabel loginTextPassword;
+    private javax.swing.JLabel loginTextUser;
     private java.awt.Panel panel1;
-    private javax.swing.JLabel textPasswordLogin;
-    private javax.swing.JLabel textUserLogin;
     // End of variables declaration//GEN-END:variables
 }
