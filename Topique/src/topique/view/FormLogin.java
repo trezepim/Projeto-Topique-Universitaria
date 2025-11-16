@@ -4,6 +4,8 @@
  */
 package topique.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author rafas
@@ -17,6 +19,7 @@ public class FormLogin extends javax.swing.JFrame {
      */
     public FormLogin() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -67,6 +70,7 @@ public class FormLogin extends javax.swing.JFrame {
 
         loginEntrarButton.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         loginEntrarButton.setText("Entrar");
+        loginEntrarButton.addActionListener(this::loginEntrarButtonActionPerformed);
 
         loginCadastrarButton.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         loginCadastrarButton.setText("Cadastrar");
@@ -120,6 +124,24 @@ public class FormLogin extends javax.swing.JFrame {
         cadastro.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_loginCadastrarButtonActionPerformed
+
+    private void loginEntrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginEntrarButtonActionPerformed
+        // TODO add your handling code here:
+        String usuario = loginBoxUser.getText();
+        String senha = new String(loginBoxPassword.getPassword());
+
+        if (usuario.equals("admin") && senha.equals("admin")) {
+            FormHomeM home = new FormHomeM();
+            home.setVisible(true);
+            this.dispose();
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos!");
+            loginBoxUser.setText("");
+            loginBoxPassword.setText("");
+            loginBoxUser.requestFocus();
+        }
+    }//GEN-LAST:event_loginEntrarButtonActionPerformed
 
     /**
      * @param args the command line arguments

@@ -17,6 +17,7 @@ public class FormCadastro extends javax.swing.JFrame {
      */
     public FormCadastro() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
