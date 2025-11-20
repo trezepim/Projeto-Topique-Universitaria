@@ -49,7 +49,7 @@
           <Group type="102" attributes="0">
               <EmptySpace pref="90" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="loginTextUser" min="-2" max="-2" attributes="0"/>
+                  <Component id="loginTextCpf" min="-2" max="-2" attributes="0"/>
                   <Component id="loginTextPassword" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="loginBoxUser" alignment="0" max="32767" attributes="0"/>
                   <Component id="loginEntrarButton" alignment="0" max="32767" attributes="0"/>
@@ -64,7 +64,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
-              <Component id="loginTextUser" min="-2" max="-2" attributes="0"/>
+              <Component id="loginTextCpf" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="loginBoxUser" min="-2" pref="48" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -94,12 +94,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBoxUserActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="loginTextUser">
+    <Component class="javax.swing.JLabel" name="loginTextCpf">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Gadugi" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Usu&#xe1;rio"/>
+        <Property name="text" type="java.lang.String" value="CPF"/>
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>

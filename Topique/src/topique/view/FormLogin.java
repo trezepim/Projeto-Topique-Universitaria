@@ -33,7 +33,7 @@ public class FormLogin extends javax.swing.JFrame {
 
         panel1 = new java.awt.Panel();
         loginBoxUser = new java.awt.TextField();
-        loginTextUser = new javax.swing.JLabel();
+        loginTextCpf = new javax.swing.JLabel();
         loginTextPassword = new javax.swing.JLabel();
         loginEntrarButton = new javax.swing.JButton();
         loginCadastrarButton = new javax.swing.JButton();
@@ -58,10 +58,10 @@ public class FormLogin extends javax.swing.JFrame {
         loginBoxUser.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
         loginBoxUser.addActionListener(this::loginBoxUserActionPerformed);
 
-        loginTextUser.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        loginTextUser.setText("Usuário");
-        loginTextUser.setName(""); // NOI18N
-        loginTextUser.setOpaque(true);
+        loginTextCpf.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        loginTextCpf.setText("CPF");
+        loginTextCpf.setName(""); // NOI18N
+        loginTextCpf.setOpaque(true);
 
         loginTextPassword.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         loginTextPassword.setText("Senha");
@@ -85,7 +85,7 @@ public class FormLogin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(90, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(loginTextUser)
+                    .addComponent(loginTextCpf)
                     .addComponent(loginTextPassword)
                     .addComponent(loginBoxUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(loginEntrarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -97,7 +97,7 @@ public class FormLogin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(218, 218, 218)
-                .addComponent(loginTextUser)
+                .addComponent(loginTextCpf)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loginBoxUser, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
@@ -130,7 +130,7 @@ public class FormLogin extends javax.swing.JFrame {
         String usuario = loginBoxUser.getText();
         String senha = new String(loginBoxPassword.getPassword());
 
-        if (usuario.equals("admin") && senha.equals("admin")) {
+        if (usuario.equals("123") && senha.equals("123")) {
             FormHomeM home = new FormHomeM();
             home.setVisible(true);
             this.dispose();
@@ -173,8 +173,8 @@ public class FormLogin extends javax.swing.JFrame {
     private java.awt.TextField loginBoxUser;
     private javax.swing.JButton loginCadastrarButton;
     private javax.swing.JButton loginEntrarButton;
+    private javax.swing.JLabel loginTextCpf;
     private javax.swing.JLabel loginTextPassword;
-    private javax.swing.JLabel loginTextUser;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }
