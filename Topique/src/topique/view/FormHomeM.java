@@ -75,7 +75,7 @@ public class FormHomeM extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(homeSairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(homeTextNomeUser))
-                .addContainerGap(797, Short.MAX_VALUE))
+                .addContainerGap(793, Short.MAX_VALUE))
         );
 
         pack();

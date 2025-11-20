@@ -51,7 +51,7 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="loginTextCpf" min="-2" max="-2" attributes="0"/>
                   <Component id="loginTextPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="loginBoxUser" alignment="0" max="32767" attributes="0"/>
+                  <Component id="loginBoxCpf" alignment="0" max="32767" attributes="0"/>
                   <Component id="loginEntrarButton" alignment="0" max="32767" attributes="0"/>
                   <Component id="loginCadastrarButton" alignment="0" pref="370" max="32767" attributes="0"/>
                   <Component id="loginBoxPassword" max="32767" attributes="0"/>
@@ -66,7 +66,7 @@
               <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
               <Component id="loginTextCpf" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="loginBoxUser" min="-2" pref="48" max="-2" attributes="0"/>
+              <Component id="loginBoxCpf" min="-2" pref="48" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Component id="loginTextPassword" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -81,7 +81,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="java.awt.TextField" name="loginBoxUser">
+    <Component class="java.awt.TextField" name="loginBoxCpf">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Texto"/>
@@ -91,7 +91,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBoxUserActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBoxCpfActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="loginTextCpf">

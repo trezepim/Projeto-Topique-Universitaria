@@ -4,11 +4,17 @@
  */
 package topique.view;
 
+import javax.swing.JOptionPane;
+import topique.dao.AlunoDAO;
+import topique.model.Aluno;
+
 /**
  *
  * @author rafas
  */
 public class FormCadastro extends javax.swing.JFrame {
+
+    private AlunoDAO dao = FormLogin.dao;
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormCadastro.class.getName());
 
@@ -30,14 +36,20 @@ public class FormCadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         panel1 = new java.awt.Panel();
-        cadastroBoxUser = new java.awt.TextField();
-        cadastroTextUser = new javax.swing.JLabel();
+        cadastroBoxNome = new java.awt.TextField();
+        cadastroTextNome = new javax.swing.JLabel();
         cadastroTextPassword = new javax.swing.JLabel();
         cadastroEntrarButton = new javax.swing.JButton();
         cadastroCadastrarButton = new javax.swing.JButton();
         cadastroBoxPassword = new javax.swing.JPasswordField();
         cadastroBoxPassword1 = new javax.swing.JPasswordField();
         cadastroTextPassword1 = new javax.swing.JLabel();
+        cadastroTextCpf = new javax.swing.JLabel();
+        cadastroBoxCpf = new java.awt.TextField();
+        cadastroBoxIdade = new java.awt.TextField();
+        cadastroTextIdade = new javax.swing.JLabel();
+        cadastroBoxMatricula = new java.awt.TextField();
+        cadastroTextMatricula = new javax.swing.JLabel();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -54,14 +66,14 @@ public class FormCadastro extends javax.swing.JFrame {
         setBackground(java.awt.Color.white);
         setForeground(java.awt.Color.white);
 
-        cadastroBoxUser.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        cadastroBoxUser.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
-        cadastroBoxUser.addActionListener(this::cadastroBoxUserActionPerformed);
+        cadastroBoxNome.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cadastroBoxNome.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        cadastroBoxNome.addActionListener(this::cadastroBoxNomeActionPerformed);
 
-        cadastroTextUser.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        cadastroTextUser.setText("Usuário");
-        cadastroTextUser.setName(""); // NOI18N
-        cadastroTextUser.setOpaque(true);
+        cadastroTextNome.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        cadastroTextNome.setText("Nome");
+        cadastroTextNome.setName(""); // NOI18N
+        cadastroTextNome.setOpaque(true);
 
         cadastroTextPassword.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         cadastroTextPassword.setText("Senha");
@@ -85,6 +97,33 @@ public class FormCadastro extends javax.swing.JFrame {
         cadastroTextPassword1.setName(""); // NOI18N
         cadastroTextPassword1.setOpaque(true);
 
+        cadastroTextCpf.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        cadastroTextCpf.setText("CPF");
+        cadastroTextCpf.setName(""); // NOI18N
+        cadastroTextCpf.setOpaque(true);
+
+        cadastroBoxCpf.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cadastroBoxCpf.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        cadastroBoxCpf.addActionListener(this::cadastroBoxCpfActionPerformed);
+
+        cadastroBoxIdade.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cadastroBoxIdade.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        cadastroBoxIdade.addActionListener(this::cadastroBoxIdadeActionPerformed);
+
+        cadastroTextIdade.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        cadastroTextIdade.setText("Idade");
+        cadastroTextIdade.setName(""); // NOI18N
+        cadastroTextIdade.setOpaque(true);
+
+        cadastroBoxMatricula.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cadastroBoxMatricula.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        cadastroBoxMatricula.addActionListener(this::cadastroBoxMatriculaActionPerformed);
+
+        cadastroTextMatricula.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        cadastroTextMatricula.setText("Matrícula");
+        cadastroTextMatricula.setName(""); // NOI18N
+        cadastroTextMatricula.setOpaque(true);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -94,23 +133,41 @@ public class FormCadastro extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cadastroEntrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(cadastroTextUser)
+                        .addComponent(cadastroTextNome)
                         .addComponent(cadastroTextPassword)
-                        .addComponent(cadastroBoxUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cadastroBoxNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cadastroCadastrarButton, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
                         .addComponent(cadastroBoxPassword)
                         .addComponent(cadastroBoxPassword1)
-                        .addComponent(cadastroTextPassword1)))
+                        .addComponent(cadastroTextPassword1)
+                        .addComponent(cadastroTextCpf)
+                        .addComponent(cadastroBoxCpf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cadastroBoxIdade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cadastroTextIdade)
+                        .addComponent(cadastroBoxMatricula, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cadastroTextMatricula)))
                 .addGap(90, 90, 90))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addComponent(cadastroTextUser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadastroBoxUser, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
+                .addComponent(cadastroTextNome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cadastroBoxNome, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addComponent(cadastroTextCpf)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cadastroBoxCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addComponent(cadastroTextIdade)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cadastroBoxIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(cadastroTextMatricula)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cadastroBoxMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addComponent(cadastroTextPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cadastroBoxPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -118,22 +175,113 @@ public class FormCadastro extends javax.swing.JFrame {
                 .addComponent(cadastroTextPassword1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cadastroBoxPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addComponent(cadastroCadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(cadastroEntrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addGap(23, 23, 23))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cadastroBoxUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroBoxUserActionPerformed
+    private void cadastroBoxNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroBoxNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cadastroBoxUserActionPerformed
+    }//GEN-LAST:event_cadastroBoxNomeActionPerformed
 
     private void cadastroCadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroCadastrarButtonActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:    
+        dao.leArquivo();
+
+        String nome = cadastroBoxNome.getText().trim();
+        String cpf = cadastroBoxCpf.getText().trim();
+        String idade = cadastroBoxIdade.getText().trim();
+        String matricula = cadastroBoxMatricula.getText().trim();
+        String senha = new String(cadastroBoxPassword.getPassword());
+        String repetirSenha = new String(cadastroBoxPassword1.getPassword());
+
+        // Verifica campos vazios
+        if (nome.isEmpty() || matricula.isEmpty() || idade.isEmpty()
+                || cpf.isEmpty() || senha.isEmpty() || repetirSenha.isEmpty()) {
+            JOptionPane.showMessageDialog(this,
+                    "Preencha todos os campos!",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Verifica senhas iguais
+        if (!senha.equals(repetirSenha)) {
+            JOptionPane.showMessageDialog(this,
+                    "As senhas não coincidem!",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+            cadastroBoxPassword.setText("");
+            cadastroBoxPassword1.setText("");
+            return;
+        }
+
+        // Matrícula só com números
+        if (!dao.soNumeros(matricula)) {
+            JOptionPane.showMessageDialog(this,
+                    "A matrícula deve conter apenas números.",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Idade só com números
+        if (!dao.soNumeros(idade)) {
+            JOptionPane.showMessageDialog(this,
+                    "A idade deve conter apenas números.",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // CPF só com números
+        if (!dao.soNumeros(cpf)) {
+            JOptionPane.showMessageDialog(this,
+                    "O CPF deve conter apenas números.",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Verifica se CPF já existe na lista
+        if (dao.cpfExiste(cpf)) {
+            JOptionPane.showMessageDialog(this,
+                    "Já existe um aluno cadastrado com esse CPF!",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Validou tudo
+        // Cria objeto Aluno
+        Aluno novoAluno = new Aluno(nome, cpf, Integer.parseInt(idade), matricula, senha);
+
+        // Adiciona na lista
+        dao.adicionarAluno(novoAluno);
+
+        // Grava no arquivo
+        dao.salvar(novoAluno);
+
+        JOptionPane.showMessageDialog(this,
+                "Aluno cadastrado com sucesso!");
+
+        // Limpa campos
+        cadastroBoxNome.setText(
+                "");
+        cadastroBoxCpf.setText(
+                "");
+        cadastroBoxIdade.setText(
+                "");
+        cadastroBoxMatricula.setText(
+                "");
+        cadastroBoxPassword.setText(
+                "");
+        cadastroBoxPassword1.setText(
+                "");
+
+        FormLogin login = new FormLogin();
+        login.setVisible(true);
+        setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_cadastroCadastrarButtonActionPerformed
 
     private void cadastroEntrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroEntrarButtonActionPerformed
@@ -142,6 +290,18 @@ public class FormCadastro extends javax.swing.JFrame {
         login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_cadastroEntrarButtonActionPerformed
+
+    private void cadastroBoxCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroBoxCpfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cadastroBoxCpfActionPerformed
+
+    private void cadastroBoxIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroBoxIdadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cadastroBoxIdadeActionPerformed
+
+    private void cadastroBoxMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroBoxMatriculaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cadastroBoxMatriculaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -169,14 +329,20 @@ public class FormCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.TextField cadastroBoxCpf;
+    private java.awt.TextField cadastroBoxIdade;
+    private java.awt.TextField cadastroBoxMatricula;
+    private java.awt.TextField cadastroBoxNome;
     private javax.swing.JPasswordField cadastroBoxPassword;
     private javax.swing.JPasswordField cadastroBoxPassword1;
-    private java.awt.TextField cadastroBoxUser;
     private javax.swing.JButton cadastroCadastrarButton;
     private javax.swing.JButton cadastroEntrarButton;
+    private javax.swing.JLabel cadastroTextCpf;
+    private javax.swing.JLabel cadastroTextIdade;
+    private javax.swing.JLabel cadastroTextMatricula;
+    private javax.swing.JLabel cadastroTextNome;
     private javax.swing.JLabel cadastroTextPassword;
     private javax.swing.JLabel cadastroTextPassword1;
-    private javax.swing.JLabel cadastroTextUser;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }

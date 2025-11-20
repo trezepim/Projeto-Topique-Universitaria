@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class AlunoDAO {
 
     private static final String ARQUIVO = "alunos.txt";
+    private ArrayList<Aluno> alunos = new ArrayList<>();
 
-    // Gravar aluno
     public void salvar(Aluno aluno) {
         try (FileWriter arquivo = new FileWriter(ARQUIVO, false); PrintWriter saida = new PrintWriter(arquivo)) {
 
@@ -17,8 +17,8 @@ public class AlunoDAO {
                     aluno.getNome() + ";"
                     + aluno.getCpf() + ";"
                     + aluno.getIdade() + ";"
-                    + aluno.getNomeFacul() + ";"
-                    + aluno.getMatricula()
+                    + aluno.getMatricula() + ";"
+                    + aluno.getSenha()
             );
 
         } catch (IOException e) {
@@ -26,9 +26,8 @@ public class AlunoDAO {
         }
     }
 
-    // Ler alunos
-    public ArrayList<Aluno> listarTodos() {
-        ArrayList<Aluno> alunos = new ArrayList<>();
+    public ArrayList<Aluno> leArquivo() {
+        alunos.clear();
 
         File arquivo = new File(ARQUIVO);
         if (!arquivo.exists()) {
@@ -38,9 +37,7 @@ public class AlunoDAO {
         try (Scanner sc = new Scanner(arquivo)) {
 
             while (sc.hasNextLine()) {
-                String linha = sc.nextLine();
-
-                String[] dados = linha.split(";");
+                String[] dados = sc.nextLine().split(";");
 
                 Aluno aluno = new Aluno(
                         dados[0],
@@ -60,4 +57,38 @@ public class AlunoDAO {
         return alunos;
     }
 
+    public boolean cpfExiste(String cpf) {
+        for (Aluno a : alunos) {
+            if (a.getCpf().equals(cpf)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean soNumeros(String texto) {
+        for (char c : texto.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public Aluno buscarPorCpf(String cpf) {
+        for (Aluno a : alunos) {
+            if (a.getCpf().equals(cpf)) {
+                return a;
+            }
+        }
+        return null;
+    }
+
+    public void adicionarAluno(Aluno aluno) {
+        alunos.add(aluno);
+    }
+
+    public ArrayList<Aluno> getAlunos() {
+        return alunos;
+    }
 }

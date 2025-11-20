@@ -5,12 +5,16 @@
 package topique.view;
 
 import javax.swing.JOptionPane;
+import topique.dao.AlunoDAO;
+import topique.model.Aluno;
 
 /**
  *
  * @author rafas
  */
 public class FormLogin extends javax.swing.JFrame {
+
+    public static AlunoDAO dao = new AlunoDAO();
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormLogin.class.getName());
 
@@ -19,6 +23,7 @@ public class FormLogin extends javax.swing.JFrame {
      */
     public FormLogin() {
         initComponents();
+        dao.leArquivo();
         setLocationRelativeTo(null);
     }
 
@@ -32,7 +37,7 @@ public class FormLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         panel1 = new java.awt.Panel();
-        loginBoxUser = new java.awt.TextField();
+        loginBoxCpf = new java.awt.TextField();
         loginTextCpf = new javax.swing.JLabel();
         loginTextPassword = new javax.swing.JLabel();
         loginEntrarButton = new javax.swing.JButton();
@@ -54,9 +59,9 @@ public class FormLogin extends javax.swing.JFrame {
         setBackground(java.awt.Color.white);
         setForeground(java.awt.Color.white);
 
-        loginBoxUser.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        loginBoxUser.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
-        loginBoxUser.addActionListener(this::loginBoxUserActionPerformed);
+        loginBoxCpf.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        loginBoxCpf.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        loginBoxCpf.addActionListener(this::loginBoxCpfActionPerformed);
 
         loginTextCpf.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         loginTextCpf.setText("CPF");
@@ -87,7 +92,7 @@ public class FormLogin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(loginTextCpf)
                     .addComponent(loginTextPassword)
-                    .addComponent(loginBoxUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(loginBoxCpf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(loginEntrarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(loginCadastrarButton, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
                     .addComponent(loginBoxPassword))
@@ -99,7 +104,7 @@ public class FormLogin extends javax.swing.JFrame {
                 .addGap(218, 218, 218)
                 .addComponent(loginTextCpf)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(loginBoxUser, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(loginBoxCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(loginTextPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -114,9 +119,9 @@ public class FormLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginBoxUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBoxUserActionPerformed
+    private void loginBoxCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBoxCpfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginBoxUserActionPerformed
+    }//GEN-LAST:event_loginBoxCpfActionPerformed
 
     private void loginCadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginCadastrarButtonActionPerformed
         // TODO add your handling code here:
@@ -127,20 +132,60 @@ public class FormLogin extends javax.swing.JFrame {
 
     private void loginEntrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginEntrarButtonActionPerformed
         // TODO add your handling code here:
-        String usuario = loginBoxUser.getText();
+        String cpf = loginBoxCpf.getText();
         String senha = new String(loginBoxPassword.getPassword());
 
-        if (usuario.equals("123") && senha.equals("123")) {
+        // Verifica campos vazios
+        if (cpf.isEmpty() || senha.isEmpty()) {
+            JOptionPane.showMessageDialog(this,
+                    "Preencha CPF e Senha!",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Login motorista
+        if (cpf.equals("123") && senha.equals("admin")) {
+            JOptionPane.showMessageDialog(this, "Login de motorista realizado!");
+            loginBoxCpf.setText("");
+            loginBoxPassword.setText("");
+
             FormHomeM home = new FormHomeM();
             home.setVisible(true);
             this.dispose();
-
-        } else {
-            JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos!");
-            loginBoxUser.setText("");
-            loginBoxPassword.setText("");
-            loginBoxUser.requestFocus();
+            return;
         }
+
+        Aluno aluno = dao.buscarPorCpf(cpf);
+
+        if (aluno == null) {
+            JOptionPane.showMessageDialog(this,
+                    "CPF não encontrado!",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+
+            loginBoxCpf.setText("");
+            loginBoxPassword.setText("");
+            loginBoxCpf.requestFocus();
+            return;
+        }
+
+        // Valida senha
+        if (!aluno.getSenha().equals(senha)) {
+            JOptionPane.showMessageDialog(this,
+                    "Senha incorreta!",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+
+            loginBoxPassword.setText("");
+            loginBoxPassword.requestFocus();
+            return;
+        }
+
+        JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
+
+        loginBoxCpf.setText("");
+        loginBoxPassword.setText("");
+        loginBoxCpf.requestFocus();
+
+        // CHAMAR TELA DO ALUNO
     }//GEN-LAST:event_loginEntrarButtonActionPerformed
 
     /**
@@ -169,8 +214,8 @@ public class FormLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.TextField loginBoxCpf;
     private javax.swing.JPasswordField loginBoxPassword;
-    private java.awt.TextField loginBoxUser;
     private javax.swing.JButton loginCadastrarButton;
     private javax.swing.JButton loginEntrarButton;
     private javax.swing.JLabel loginTextCpf;
