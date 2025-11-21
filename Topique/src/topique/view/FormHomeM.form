@@ -47,9 +47,49 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="homeTextNomeUser" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="387" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="homeMTextAluno2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextBairro2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextBairro1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextAluno1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextAluno3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextEndereco1" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextEndereco2" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextEndereco3" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextBairro3" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextAluno4" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextBairro4" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextEndereco4" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="88" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
+                          <Component id="homeMCheckbox1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="homeMTextEntregue1" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="homeMTextEntregue2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextEntregue3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="homeMTextEntregue4" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="homeMCheckbox2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="homeMCheckbox3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="homeMCheckbox4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="homeMTextRotasDoDia" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
               <Component id="homeSairButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
@@ -58,23 +98,83 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="homeSairButton" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="homeTextNomeUser" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="homeMTextRotasDoDia" min="-2" max="-2" attributes="0"/>
+                          <Component id="homeSairButton" min="-2" pref="31" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                      <Component id="homeMTextAluno1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="homeMTextBairro1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="homeMTextEntregue1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="homeMCheckbox1" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="793" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="homeMTextEndereco1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="homeMTextAluno2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="homeMTextBairro2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="homeMTextEntregue2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="homeMCheckbox2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="homeMTextEndereco2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="homeMTextAluno3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="homeMTextBairro3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="homeMTextEntregue3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="homeMCheckbox3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="homeMTextEndereco3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="homeMTextAluno4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="homeMTextBairro4" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="homeMTextEntregue4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="homeMCheckbox4" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="homeMTextEndereco4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="168" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="homeTextNomeUser">
+    <Component class="javax.swing.JLabel" name="homeMTextRotasDoDia">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Gadugi" size="24" style="1"/>
+          <Font name="Gadugi" size="26" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="null"/>
+        <Property name="text" type="java.lang.String" value="ROTAS DO DIA"/>
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
@@ -89,6 +189,186 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeSairButtonActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextAluno1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="24" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cinthia Cristina"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextBairro1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Mata da Praia"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextEndereco1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="R. Moacir Avidos, 380"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextAluno2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="24" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Elias Silva"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextBairro2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Jardim da Penha"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextEndereco2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="R. Francisco Eug&#xea;nio Mussielo, 600"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextEndereco3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="R. Agenor Amaro dos Santos, 966"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextBairro3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Jardim Camburi"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextAluno3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="24" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Guilherme Paiva"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextAluno4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="24" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Rafael Pim"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextBairro4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Bairro de F&#xe1;tima"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextEndereco4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="R. Vit&#xf3;ria, 134"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Checkbox" name="homeMCheckbox1">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextEntregue1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Entregue"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextEntregue2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Entregue"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Checkbox" name="homeMCheckbox2">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextEntregue3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Entregue"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Checkbox" name="homeMCheckbox3">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeMTextEntregue4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gadugi" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Entregue"/>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Checkbox" name="homeMCheckbox4">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

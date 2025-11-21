@@ -30,8 +30,28 @@ public class FormHomeM extends javax.swing.JFrame {
     private void initComponents() {
 
         panel1 = new java.awt.Panel();
-        homeTextNomeUser = new javax.swing.JLabel();
+        homeMTextRotasDoDia = new javax.swing.JLabel();
         homeSairButton = new javax.swing.JButton();
+        homeMTextAluno1 = new javax.swing.JLabel();
+        homeMTextBairro1 = new javax.swing.JLabel();
+        homeMTextEndereco1 = new javax.swing.JLabel();
+        homeMTextAluno2 = new javax.swing.JLabel();
+        homeMTextBairro2 = new javax.swing.JLabel();
+        homeMTextEndereco2 = new javax.swing.JLabel();
+        homeMTextEndereco3 = new javax.swing.JLabel();
+        homeMTextBairro3 = new javax.swing.JLabel();
+        homeMTextAluno3 = new javax.swing.JLabel();
+        homeMTextAluno4 = new javax.swing.JLabel();
+        homeMTextBairro4 = new javax.swing.JLabel();
+        homeMTextEndereco4 = new javax.swing.JLabel();
+        homeMCheckbox1 = new java.awt.Checkbox();
+        homeMTextEntregue1 = new javax.swing.JLabel();
+        homeMTextEntregue2 = new javax.swing.JLabel();
+        homeMCheckbox2 = new java.awt.Checkbox();
+        homeMTextEntregue3 = new javax.swing.JLabel();
+        homeMCheckbox3 = new java.awt.Checkbox();
+        homeMTextEntregue4 = new javax.swing.JLabel();
+        homeMCheckbox4 = new java.awt.Checkbox();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -48,34 +68,203 @@ public class FormHomeM extends javax.swing.JFrame {
         setBackground(java.awt.Color.white);
         setForeground(java.awt.Color.white);
 
-        homeTextNomeUser.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        homeTextNomeUser.setText("null");
-        homeTextNomeUser.setName(""); // NOI18N
-        homeTextNomeUser.setOpaque(true);
+        homeMTextRotasDoDia.setFont(new java.awt.Font("Gadugi", 1, 26)); // NOI18N
+        homeMTextRotasDoDia.setText("ROTAS DO DIA");
+        homeMTextRotasDoDia.setName(""); // NOI18N
+        homeMTextRotasDoDia.setOpaque(true);
 
         homeSairButton.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
         homeSairButton.setText("Sair");
         homeSairButton.addActionListener(this::homeSairButtonActionPerformed);
+
+        homeMTextAluno1.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        homeMTextAluno1.setText("Cinthia Cristina");
+        homeMTextAluno1.setName(""); // NOI18N
+        homeMTextAluno1.setOpaque(true);
+
+        homeMTextBairro1.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextBairro1.setText("Mata da Praia");
+        homeMTextBairro1.setName(""); // NOI18N
+        homeMTextBairro1.setOpaque(true);
+
+        homeMTextEndereco1.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextEndereco1.setText("R. Moacir Avidos, 380");
+        homeMTextEndereco1.setName(""); // NOI18N
+        homeMTextEndereco1.setOpaque(true);
+
+        homeMTextAluno2.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        homeMTextAluno2.setText("Elias Silva");
+        homeMTextAluno2.setName(""); // NOI18N
+        homeMTextAluno2.setOpaque(true);
+
+        homeMTextBairro2.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextBairro2.setText("Jardim da Penha");
+        homeMTextBairro2.setName(""); // NOI18N
+        homeMTextBairro2.setOpaque(true);
+
+        homeMTextEndereco2.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextEndereco2.setText("R. Francisco Eugênio Mussielo, 600");
+        homeMTextEndereco2.setName(""); // NOI18N
+        homeMTextEndereco2.setOpaque(true);
+
+        homeMTextEndereco3.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextEndereco3.setText("R. Agenor Amaro dos Santos, 966");
+        homeMTextEndereco3.setName(""); // NOI18N
+        homeMTextEndereco3.setOpaque(true);
+
+        homeMTextBairro3.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextBairro3.setText("Jardim Camburi");
+        homeMTextBairro3.setName(""); // NOI18N
+        homeMTextBairro3.setOpaque(true);
+
+        homeMTextAluno3.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        homeMTextAluno3.setText("Guilherme Paiva");
+        homeMTextAluno3.setName(""); // NOI18N
+        homeMTextAluno3.setOpaque(true);
+
+        homeMTextAluno4.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        homeMTextAluno4.setText("Rafael Pim");
+        homeMTextAluno4.setName(""); // NOI18N
+        homeMTextAluno4.setOpaque(true);
+
+        homeMTextBairro4.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextBairro4.setText("Bairro de Fátima");
+        homeMTextBairro4.setName(""); // NOI18N
+        homeMTextBairro4.setOpaque(true);
+
+        homeMTextEndereco4.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextEndereco4.setText("R. Vitória, 134");
+        homeMTextEndereco4.setName(""); // NOI18N
+        homeMTextEndereco4.setOpaque(true);
+
+        homeMCheckbox1.setName(""); // NOI18N
+
+        homeMTextEntregue1.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextEntregue1.setText("Entregue");
+        homeMTextEntregue1.setName(""); // NOI18N
+        homeMTextEntregue1.setOpaque(true);
+
+        homeMTextEntregue2.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextEntregue2.setText("Entregue");
+        homeMTextEntregue2.setName(""); // NOI18N
+        homeMTextEntregue2.setOpaque(true);
+
+        homeMCheckbox2.setName(""); // NOI18N
+
+        homeMTextEntregue3.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextEntregue3.setText("Entregue");
+        homeMTextEntregue3.setName(""); // NOI18N
+        homeMTextEntregue3.setOpaque(true);
+
+        homeMCheckbox3.setName(""); // NOI18N
+
+        homeMTextEntregue4.setFont(new java.awt.Font("Gadugi", 0, 20)); // NOI18N
+        homeMTextEntregue4.setText("Entregue");
+        homeMTextEntregue4.setName(""); // NOI18N
+        homeMTextEntregue4.setOpaque(true);
+
+        homeMCheckbox4.setName(""); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(homeTextNomeUser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 387, Short.MAX_VALUE)
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(homeMTextAluno2)
+                    .addComponent(homeMTextBairro2)
+                    .addComponent(homeMTextBairro1)
+                    .addComponent(homeMTextAluno1)
+                    .addComponent(homeMTextAluno3)
+                    .addComponent(homeMTextEndereco1)
+                    .addComponent(homeMTextEndereco2)
+                    .addComponent(homeMTextEndereco3)
+                    .addComponent(homeMTextBairro3)
+                    .addComponent(homeMTextAluno4)
+                    .addComponent(homeMTextBairro4)
+                    .addComponent(homeMTextEndereco4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(29, 29, 29)
+                            .addComponent(homeMCheckbox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(23, 23, 23))
+                        .addComponent(homeMTextEntregue1, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(homeMTextEntregue2)
+                    .addComponent(homeMTextEntregue3)
+                    .addComponent(homeMTextEntregue4)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(homeMCheckbox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(homeMCheckbox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(homeMCheckbox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(68, 68, 68))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(homeMTextRotasDoDia)
+                .addGap(101, 101, 101)
                 .addComponent(homeSairButton)
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(homeSairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(homeTextNomeUser))
-                .addContainerGap(793, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(homeMTextRotasDoDia)
+                            .addComponent(homeSairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(90, 90, 90)
+                        .addComponent(homeMTextAluno1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeMTextBairro1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(homeMTextEntregue1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeMCheckbox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(homeMTextEndereco1)
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(homeMTextAluno2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeMTextBairro2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(homeMTextEntregue2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeMCheckbox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(homeMTextEndereco2)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(homeMTextAluno3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeMTextBairro3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(homeMTextEntregue3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeMCheckbox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(homeMTextEndereco3)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(homeMTextAluno4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeMTextBairro4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(homeMTextEntregue4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeMCheckbox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(homeMTextEndereco4)
+                .addContainerGap(168, Short.MAX_VALUE))
         );
 
         pack();
@@ -114,8 +303,28 @@ public class FormHomeM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Checkbox homeMCheckbox1;
+    private java.awt.Checkbox homeMCheckbox2;
+    private java.awt.Checkbox homeMCheckbox3;
+    private java.awt.Checkbox homeMCheckbox4;
+    private javax.swing.JLabel homeMTextAluno1;
+    private javax.swing.JLabel homeMTextAluno2;
+    private javax.swing.JLabel homeMTextAluno3;
+    private javax.swing.JLabel homeMTextAluno4;
+    private javax.swing.JLabel homeMTextBairro1;
+    private javax.swing.JLabel homeMTextBairro2;
+    private javax.swing.JLabel homeMTextBairro3;
+    private javax.swing.JLabel homeMTextBairro4;
+    private javax.swing.JLabel homeMTextEndereco1;
+    private javax.swing.JLabel homeMTextEndereco2;
+    private javax.swing.JLabel homeMTextEndereco3;
+    private javax.swing.JLabel homeMTextEndereco4;
+    private javax.swing.JLabel homeMTextEntregue1;
+    private javax.swing.JLabel homeMTextEntregue2;
+    private javax.swing.JLabel homeMTextEntregue3;
+    private javax.swing.JLabel homeMTextEntregue4;
+    private javax.swing.JLabel homeMTextRotasDoDia;
     private javax.swing.JButton homeSairButton;
-    private javax.swing.JLabel homeTextNomeUser;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }
