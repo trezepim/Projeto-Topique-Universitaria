@@ -62,7 +62,7 @@
                   <Component id="homeMTextBairro4" min="-2" max="-2" attributes="0"/>
                   <Component id="homeMTextEndereco4" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="88" max="32767" attributes="0"/>
+              <EmptySpace pref="80" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -90,7 +90,7 @@
               <EmptySpace max="32767" attributes="0"/>
               <Component id="homeMTextRotasDoDia" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-              <Component id="homeSairButton" min="-2" max="-2" attributes="0"/>
+              <Component id="homeMSairButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -103,7 +103,7 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="homeMTextRotasDoDia" min="-2" max="-2" attributes="0"/>
-                          <Component id="homeSairButton" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="homeMSairButton" min="-2" pref="31" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                       <Component id="homeMTextAluno1" min="-2" max="-2" attributes="0"/>
@@ -179,7 +179,7 @@
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="homeSairButton">
+    <Component class="javax.swing.JButton" name="homeMSairButton">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Gadugi" size="20" style="1"/>
@@ -187,7 +187,7 @@
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeSairButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeMSairButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="homeMTextAluno1">

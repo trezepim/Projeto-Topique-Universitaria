@@ -31,7 +31,7 @@ public class FormHomeM extends javax.swing.JFrame {
 
         panel1 = new java.awt.Panel();
         homeMTextRotasDoDia = new javax.swing.JLabel();
-        homeSairButton = new javax.swing.JButton();
+        homeMSairButton = new javax.swing.JButton();
         homeMTextAluno1 = new javax.swing.JLabel();
         homeMTextBairro1 = new javax.swing.JLabel();
         homeMTextEndereco1 = new javax.swing.JLabel();
@@ -73,9 +73,9 @@ public class FormHomeM extends javax.swing.JFrame {
         homeMTextRotasDoDia.setName(""); // NOI18N
         homeMTextRotasDoDia.setOpaque(true);
 
-        homeSairButton.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        homeSairButton.setText("Sair");
-        homeSairButton.addActionListener(this::homeSairButtonActionPerformed);
+        homeMSairButton.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        homeMSairButton.setText("Sair");
+        homeMSairButton.addActionListener(this::homeMSairButtonActionPerformed);
 
         homeMTextAluno1.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         homeMTextAluno1.setText("Cinthia Cristina");
@@ -184,7 +184,7 @@ public class FormHomeM extends javax.swing.JFrame {
                     .addComponent(homeMTextAluno4)
                     .addComponent(homeMTextBairro4)
                     .addComponent(homeMTextEndereco4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
@@ -206,7 +206,7 @@ public class FormHomeM extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(homeMTextRotasDoDia)
                 .addGap(101, 101, 101)
-                .addComponent(homeSairButton)
+                .addComponent(homeMSairButton)
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
@@ -217,7 +217,7 @@ public class FormHomeM extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(homeMTextRotasDoDia)
-                            .addComponent(homeSairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(homeMSairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(90, 90, 90)
                         .addComponent(homeMTextAluno1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -270,12 +270,12 @@ public class FormHomeM extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void homeSairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeSairButtonActionPerformed
+    private void homeMSairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMSairButtonActionPerformed
         // TODO add your handling code here:
         FormLogin login = new FormLogin();
         login.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_homeSairButtonActionPerformed
+    }//GEN-LAST:event_homeMSairButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -307,6 +307,7 @@ public class FormHomeM extends javax.swing.JFrame {
     private java.awt.Checkbox homeMCheckbox2;
     private java.awt.Checkbox homeMCheckbox3;
     private java.awt.Checkbox homeMCheckbox4;
+    private javax.swing.JButton homeMSairButton;
     private javax.swing.JLabel homeMTextAluno1;
     private javax.swing.JLabel homeMTextAluno2;
     private javax.swing.JLabel homeMTextAluno3;
@@ -324,7 +325,6 @@ public class FormHomeM extends javax.swing.JFrame {
     private javax.swing.JLabel homeMTextEntregue3;
     private javax.swing.JLabel homeMTextEntregue4;
     private javax.swing.JLabel homeMTextRotasDoDia;
-    private javax.swing.JButton homeSairButton;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }

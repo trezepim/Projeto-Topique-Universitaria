@@ -185,7 +185,9 @@ public class FormLogin extends javax.swing.JFrame {
         loginBoxPassword.setText("");
         loginBoxCpf.requestFocus();
 
-        // CHAMAR TELA DO ALUNO
+        FormHomeA homeA = new FormHomeA();
+        homeA.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_loginEntrarButtonActionPerformed
 
     /**
