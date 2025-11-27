@@ -4,13 +4,24 @@
  */
 package topique.view;
 
+import topique.model.Motorista;
+
 public class FormHomeM extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormHomeM.class.getName());
 
     /**
      * Creates new form FormLogin
+     *
+     * @param motorista
      */
+    public FormHomeM(Motorista motorista) {
+        initComponents();
+        setLocationRelativeTo(null);
+
+        homeMTextSaudacao.setText(motorista.saudacao());
+    }
+
     public FormHomeM() {
         initComponents();
         setLocationRelativeTo(null);
@@ -48,6 +59,7 @@ public class FormHomeM extends javax.swing.JFrame {
         homeMCheckbox3 = new java.awt.Checkbox();
         homeMTextEntregue4 = new javax.swing.JLabel();
         homeMCheckbox4 = new java.awt.Checkbox();
+        homeMTextSaudacao = new javax.swing.JLabel();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -161,6 +173,9 @@ public class FormHomeM extends javax.swing.JFrame {
 
         homeMCheckbox4.setName(""); // NOI18N
 
+        homeMTextSaudacao.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        homeMTextSaudacao.setText("default");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -200,10 +215,14 @@ public class FormHomeM extends javax.swing.JFrame {
                 .addGap(68, 68, 68))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(homeMTextRotasDoDia)
-                .addGap(101, 101, 101)
+                .addComponent(homeMTextSaudacao)
+                .addGap(146, 146, 146)
                 .addComponent(homeMSairButton)
                 .addGap(21, 21, 21))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(175, 175, 175)
+                .addComponent(homeMTextRotasDoDia)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,10 +230,12 @@ public class FormHomeM extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(homeMTextRotasDoDia)
-                            .addComponent(homeMSairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(90, 90, 90)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(homeMSairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(homeMTextSaudacao))
+                        .addGap(26, 26, 26)
+                        .addComponent(homeMTextRotasDoDia)
+                        .addGap(33, 33, 33)
                         .addComponent(homeMTextAluno1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(homeMTextBairro1))
@@ -321,6 +342,7 @@ public class FormHomeM extends javax.swing.JFrame {
     private javax.swing.JLabel homeMTextEntregue3;
     private javax.swing.JLabel homeMTextEntregue4;
     private javax.swing.JLabel homeMTextRotasDoDia;
+    private javax.swing.JLabel homeMTextSaudacao;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }

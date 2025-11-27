@@ -5,6 +5,7 @@
 package topique.view;
 
 import javax.swing.JOptionPane;
+import topique.model.Aluno;
 
 public class FormHomeA extends javax.swing.JFrame {
 
@@ -12,7 +13,16 @@ public class FormHomeA extends javax.swing.JFrame {
 
     /**
      * Creates new form FormLogin
+     *
+     * @param aluno
      */
+    public FormHomeA(Aluno aluno) {
+        initComponents();
+        setLocationRelativeTo(null);
+
+        homeATextSaudacao.setText(aluno.saudacao());
+    }
+
     public FormHomeA() {
         initComponents();
         setLocationRelativeTo(null);
@@ -38,6 +48,7 @@ public class FormHomeA extends javax.swing.JFrame {
         homeACheckBox = new javax.swing.JCheckBox();
         homeAButtonSolicitarCorrida = new javax.swing.JButton();
         homeATextFieldLoc = new javax.swing.JTextField();
+        homeATextSaudacao = new javax.swing.JLabel();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -90,6 +101,9 @@ public class FormHomeA extends javax.swing.JFrame {
         homeAButtonSolicitarCorrida.setText("SOLICITAR CORRIDA");
         homeAButtonSolicitarCorrida.addActionListener(this::homeAButtonSolicitarCorridaActionPerformed);
 
+        homeATextSaudacao.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        homeATextSaudacao.setText("default");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -118,11 +132,14 @@ public class FormHomeA extends javax.swing.JFrame {
                         .addGap(228, 228, 228))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(homeMTextUsarLoc)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addComponent(homeATextSaudacao)
+                                .addGap(158, 158, 158)
+                                .addComponent(homeASairButton))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(homeMTextSolicitarCorrida)
-                                .addGap(60, 60, 60)
-                                .addComponent(homeASairButton)))
+                                .addComponent(homeMTextUsarLoc)))
                         .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(homeATextFieldLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,9 +150,11 @@ public class FormHomeA extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homeMTextSolicitarCorrida)
-                    .addComponent(homeASairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(85, 85, 85)
+                    .addComponent(homeASairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(homeATextSaudacao))
+                .addGap(17, 17, 17)
+                .addComponent(homeMTextSolicitarCorrida)
+                .addGap(37, 37, 37)
                 .addComponent(homeMTextUsarLoc)
                 .addGap(18, 18, 18)
                 .addComponent(homeAToggleButton)
@@ -243,6 +262,7 @@ public class FormHomeA extends javax.swing.JFrame {
     private javax.swing.JTextField homeATextFieldLoc;
     private javax.swing.JLabel homeATextLeiaRegras;
     private javax.swing.JLabel homeATextLeiaRegras1;
+    private javax.swing.JLabel homeATextSaudacao;
     private javax.swing.JToggleButton homeAToggleButton;
     private javax.swing.JLabel homeMTextSolicitarCorrida;
     private javax.swing.JLabel homeMTextUsarLoc;

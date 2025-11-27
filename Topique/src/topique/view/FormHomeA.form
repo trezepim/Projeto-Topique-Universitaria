@@ -76,11 +76,15 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="homeMTextUsarLoc" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="homeMTextSolicitarCorrida" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="homeATextSaudacao" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
                               <Component id="homeASairButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="homeMTextSolicitarCorrida" min="-2" max="-2" attributes="0"/>
+                              <Component id="homeMTextUsarLoc" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
@@ -98,10 +102,12 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="homeMTextSolicitarCorrida" min="-2" max="-2" attributes="0"/>
                   <Component id="homeASairButton" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="homeATextSaudacao" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <Component id="homeMTextSolicitarCorrida" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Component id="homeMTextUsarLoc" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Component id="homeAToggleButton" min="-2" max="-2" attributes="0"/>
@@ -215,6 +221,14 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="homeATextFieldLoc">
+    </Component>
+    <Component class="javax.swing.JLabel" name="homeATextSaudacao">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="default"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

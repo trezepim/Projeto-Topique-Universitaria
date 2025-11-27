@@ -15,6 +15,9 @@ public class Motorista extends Pessoa {
         this.quantAssentos = quantAssentos;
     }
 
+    public Motorista() {
+    }
+
     public String getCnh() {
         return cnh;
     }

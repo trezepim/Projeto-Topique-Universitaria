@@ -7,6 +7,7 @@ package topique.view;
 import javax.swing.JOptionPane;
 import topique.dao.AlunoDAO;
 import topique.model.Aluno;
+import topique.model.Motorista;
 
 public class FormLogin extends javax.swing.JFrame {
 
@@ -145,7 +146,9 @@ public class FormLogin extends javax.swing.JFrame {
             loginBoxCpf.setText("");
             loginBoxPassword.setText("");
 
-            FormHomeM home = new FormHomeM();
+            Motorista motorista = new Motorista();
+
+            FormHomeM home = new FormHomeM(motorista);
             home.setVisible(true);
             this.dispose();
             return;
@@ -182,7 +185,7 @@ public class FormLogin extends javax.swing.JFrame {
         loginBoxPassword.setText("");
         loginBoxCpf.requestFocus();
 
-        FormHomeA homeA = new FormHomeA();
+        FormHomeA homeA = new FormHomeA(aluno);
         homeA.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_loginEntrarButtonActionPerformed
