@@ -18,4 +18,9 @@ public class Aluno extends Pessoa {
     public String getSenha() {
         return senha;
     }
+
+    @Override
+    public String saudacao() {
+        return "Olá " + getNome() + "!";
+    }
 }

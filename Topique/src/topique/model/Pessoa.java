@@ -23,4 +23,8 @@ public abstract class Pessoa {
     public int getIdade() {
         return idade;
     }
+
+    public String saudacao() {
+        return "Olá pessoa!";
+    }
 }

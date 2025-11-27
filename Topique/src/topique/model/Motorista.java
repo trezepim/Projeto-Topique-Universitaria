@@ -30,4 +30,9 @@ public class Motorista extends Pessoa {
     public int getQuantAssentos() {
         return quantAssentos;
     }
+
+    @Override
+    public String saudacao() {
+        return "Olá motorista!";
+    }
 }
