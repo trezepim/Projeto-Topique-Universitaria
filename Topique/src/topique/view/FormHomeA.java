@@ -6,10 +6,6 @@ package topique.view;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author rafas
- */
 public class FormHomeA extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormHomeA.class.getName());
@@ -41,6 +37,7 @@ public class FormHomeA extends javax.swing.JFrame {
         homeAButtonRegras = new javax.swing.JButton();
         homeACheckBox = new javax.swing.JCheckBox();
         homeAButtonSolicitarCorrida = new javax.swing.JButton();
+        homeATextFieldLoc = new javax.swing.JTextField();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -105,14 +102,6 @@ public class FormHomeA extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(homeMTextSolicitarCorrida)
-                        .addGap(60, 60, 60)
-                        .addComponent(homeASairButton)
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(homeMTextUsarLoc)
-                        .addGap(142, 142, 142))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(homeATextLeiaRegras1)
                         .addGap(144, 144, 144))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -126,7 +115,18 @@ public class FormHomeA extends javax.swing.JFrame {
                         .addGap(140, 140, 140))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(homeAToggleButton)
-                        .addGap(228, 228, 228))))
+                        .addGap(228, 228, 228))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(homeMTextUsarLoc)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(homeMTextSolicitarCorrida)
+                                .addGap(60, 60, 60)
+                                .addComponent(homeASairButton)))
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(homeATextFieldLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(91, 91, 91))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,7 +139,9 @@ public class FormHomeA extends javax.swing.JFrame {
                 .addComponent(homeMTextUsarLoc)
                 .addGap(18, 18, 18)
                 .addComponent(homeAToggleButton)
-                .addGap(126, 126, 126)
+                .addGap(18, 18, 18)
+                .addComponent(homeATextFieldLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
                 .addComponent(homeATextLeiaRegras)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(homeATextLeiaRegras1)
@@ -163,24 +165,45 @@ public class FormHomeA extends javax.swing.JFrame {
     }//GEN-LAST:event_homeASairButtonActionPerformed
 
     private void homeAToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeAToggleButtonActionPerformed
+
         if (homeAToggleButton.isSelected()) {
             homeAToggleButton.setText("SIM");
+            homeATextFieldLoc.setVisible(false);
         } else {
             homeAToggleButton.setText("NÃO");
+            homeATextFieldLoc.setVisible(true);
         }
+
+        // Atualiza o layout da tela
+        this.revalidate();
+        this.repaint();
     }//GEN-LAST:event_homeAToggleButtonActionPerformed
 
     private void homeAButtonRegrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeAButtonRegrasActionPerformed
         // TODO add your handling code here:
+        FormHomeARegras homeARegras = new FormHomeARegras();
+        homeARegras.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_homeAButtonRegrasActionPerformed
 
     private void homeAButtonSolicitarCorridaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeAButtonSolicitarCorridaActionPerformed
-        if (homeACheckBox.isSelected())
-            JOptionPane.showMessageDialog(this, "Corrida solicitada!");
-        else
-            JOptionPane.showMessageDialog(this,
+        if (homeACheckBox.isSelected()) {
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Corrida solicitada!\n"
+                    + "Motorista: Lucas\n"
+                    + "Placa: RQM4C98\n"
+                    + "Tempo estimado: 15 minutos"
+            );
+        } else {
+            JOptionPane.showMessageDialog(
+                    this,
                     "É necessário confirmar que leu as regras!",
-                    "Erro", JOptionPane.ERROR_MESSAGE);
+                    "Erro",
+                    JOptionPane.ERROR_MESSAGE
+            );
+        }
+
     }//GEN-LAST:event_homeAButtonSolicitarCorridaActionPerformed
 
     private void homeACheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeACheckBoxActionPerformed
@@ -217,6 +240,7 @@ public class FormHomeA extends javax.swing.JFrame {
     private javax.swing.JButton homeAButtonSolicitarCorrida;
     private javax.swing.JCheckBox homeACheckBox;
     private javax.swing.JButton homeASairButton;
+    private javax.swing.JTextField homeATextFieldLoc;
     private javax.swing.JLabel homeATextLeiaRegras;
     private javax.swing.JLabel homeATextLeiaRegras1;
     private javax.swing.JToggleButton homeAToggleButton;

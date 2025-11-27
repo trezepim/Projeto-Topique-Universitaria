@@ -8,10 +8,6 @@ import javax.swing.JOptionPane;
 import topique.dao.AlunoDAO;
 import topique.model.Aluno;
 
-/**
- *
- * @author rafas
- */
 public class FormLogin extends javax.swing.JFrame {
 
     public static AlunoDAO dao = new AlunoDAO();
@@ -78,7 +74,7 @@ public class FormLogin extends javax.swing.JFrame {
         loginEntrarButton.addActionListener(this::loginEntrarButtonActionPerformed);
 
         loginCadastrarButton.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        loginCadastrarButton.setText("Cadastrar");
+        loginCadastrarButton.setText("Cadastrar aluno");
         loginCadastrarButton.addActionListener(this::loginCadastrarButtonActionPerformed);
 
         loginBoxPassword.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
@@ -157,6 +153,7 @@ public class FormLogin extends javax.swing.JFrame {
 
         Aluno aluno = dao.buscarPorCpf(cpf);
 
+        // Aluno não cadastrado
         if (aluno == null) {
             JOptionPane.showMessageDialog(this,
                     "CPF não encontrado!",

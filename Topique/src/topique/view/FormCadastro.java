@@ -8,10 +8,6 @@ import javax.swing.JOptionPane;
 import topique.dao.AlunoDAO;
 import topique.model.Aluno;
 
-/**
- *
- * @author rafas
- */
 public class FormCadastro extends javax.swing.JFrame {
 
     private AlunoDAO dao = FormLogin.dao;

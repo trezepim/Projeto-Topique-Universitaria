@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 public class AlunoDAO {
 
-    private static final String ARQUIVO = "alunos.txt";
+    private static String ARQUIVO = "alunos.txt";
     private ArrayList<Aluno> alunos = new ArrayList<>();
 
     public void salvar(Aluno aluno) {
-        try (FileWriter arquivo = new FileWriter(ARQUIVO, false); PrintWriter saida = new PrintWriter(arquivo)) {
+        try (FileWriter arquivo = new FileWriter(ARQUIVO, true); PrintWriter saida = new PrintWriter(arquivo)) {
 
             saida.println(
                     aluno.getNome() + ";"

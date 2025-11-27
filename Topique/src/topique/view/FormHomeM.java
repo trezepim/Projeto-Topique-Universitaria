@@ -4,10 +4,6 @@
  */
 package topique.view;
 
-/**
- *
- * @author rafas
- */
 public class FormHomeM extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormHomeM.class.getName());
